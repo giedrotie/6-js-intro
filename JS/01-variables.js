@@ -9,10 +9,13 @@ console.log ('Mano vardas yra');
 console.log ('Man yra 5 metai');
 
 /*
-KINTAMUJU INCIAVIMO BUDAI:
-const - 
-let - 
-var - esant galimybei NENAUDOTI!!!!!!!
+KINTAMUJU INICIJAVIMO BUDAI:
+const - kintamasis, kurio reiksmes negalima priskirti is naujo (t.y. dalykas, kuris nesikeicia iki projekto pabaigos)
+        * pagal nutylejima visada kuriama const!
+let - kintamasis, kurio reiksme gali buti priskirta is naujo kiek nori kartu
+var - (pats "minksciausias") esant galimybei !!!!!!!!!!!NENAUDOTI!!!!!!! 
+
+** yra papildomu salygu su kompleksiniais kinatmaisiais **
 */
 
 
@@ -58,19 +61,18 @@ const pirmasPazymys = pazymiai[0];
 console.log(pirmasPazymys);
 
 //1-oji pozicija sarase visada yra 0. 2-oji pozicija yra 1 ir t.t.
-
 const antrasPazymys = pazymiai[1];
 console.log(antrasPazymys);
 
+// skaiciu suma
 const pazymiuSuma = pazymiai[0] + pazymiai[1] + pazymiai[2] + pazymiai[3] + pazymiai[4] + pazymiai[5];
 
+// skaiciu kiekis
 const pazymiuKiekis = pazymiai.length;
 
+//skaiciu vidurkis
 const pazymiuVidurkis = pazymiuSuma / pazymiuKiekis;
 
 console.log('Pazymiu suma:', pazymiuSuma);
-console.log('Pazymiu suma:', pazymiuKiekis);
+console.log('Pazymiu kiekis:', pazymiuKiekis);
 console.log('Pazymiu vidurkis:', pazymiuVidurkis);
-
-
- 
