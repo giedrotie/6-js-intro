@@ -76,3 +76,6 @@ const navHTML2 = `<nav>
                 <a href="#">Link</a>
                 </nav>`;
 console.log(navHTML2);
+
+// !!! jeigu tekstinis turinys yra tik viena eilute, naudosiu '' kabutes, jei reikes padaryti kintamojo iterpima i teksta naudosiu ``.
+
