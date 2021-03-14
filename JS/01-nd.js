@@ -83,5 +83,4 @@ console.log('Vardu saraso kintamuju sujungimas su kableliu ir tarpu:', varduSara
 const balsiuTipoSarasoKintamujuSujungimas = balses[4] + ',' + ' ' + balses[3] + ',' + ' ' + balses[2] + ',' + ' ' + balses[1] + ',' + ' ' + balses[0];
 console.log('Balsiu tipo saraso kintamuju sujungimas:', balsiuTipoSarasoKintamujuSujungimas);
 
-//Kintamuju palyginimas - jei rezultatas tenkina palyginimo salyga, console isvesti "Pomidoras", o jei salyga nera tenkinama, isvesti sakini "Bandykite dar karta"
-//1
+
