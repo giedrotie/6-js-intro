@@ -2,13 +2,12 @@
 
 SWITCH STATEMENT: 
 
-- is esmes dirba su zodynu, kai yra zinomos visos KONKRECIOS GALIOS REIKSMES,
-o IF programine prasme yra "superior" nes jis gali daug daugiau nei switchas
 
 switch - ribotu galimybiu funkcionalumas
 switch () { case, break, default }
 
-switch - ribotu galimybiu funkcionalumas
+- is esmes dirba su zodynu, kai yra zinomos visos KONKRECIOS GALIMOS REIKSMES,
+o IF programine prasme yra "superior" nes jis gali daug daugiau nei switchas
 
 - switch yra labai panasus i kai kiekviena atskiras  casas turi savo logika ir breaka  
 darbu arba logikos procesas
@@ -22,6 +21,7 @@ darbu arba logikos procesas
 const animal = 'crocodile';
 switch (animal) 
 //klausimo dalis
+
 { case 'dog':
     console.log('Bark bark');
     break;
@@ -40,7 +40,7 @@ switch (animal)
 if (animal === 'dog') {
     console.log ('Bark bark');
 } else if (animal === 'cat') {
-    conaole.log('Meow meow');
+    console.log('Meow meow');
 } else {
     console.log('Unknown animal');
 }
@@ -165,7 +165,3 @@ if ( process === 1) {
     console.log ('gerti');
 }
 */ 
-
-
-// jeigu ilipai toje stoteleje as tau isvardinsiu, kokios stoteles dar liko vaziuoti
-
