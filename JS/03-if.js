@@ -233,3 +233,4 @@ if (akys !== 'Melynos' ||
     console.log ('Tu turi vienas is man zinomu akiu spalvu');
 }
 // spausdins: 'Oj kokie fainulkos!!! ir 'Tu turi vienas is man zinomu akiu spalvu'
+
