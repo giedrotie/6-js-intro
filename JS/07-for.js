@@ -102,19 +102,36 @@ for (let i = 0; i < marks.length; i++) { // suksis tol kol baigsis
 const average = sum / marks.length;
 console.log (sum, '/', marks.length, '=', average); // 46 "/" 7 "=" 6.57
 
-/*                   // vietoj 
+/*                   
+// vietoj 
+
 const pazymys = marks[i]; 
 sum +=  pazymys;     //galima rasyti tik
+
 *****************
 sum += marks[i];
 *****************
 */
 
 
-/* *************EJIMAS PER SARASA:******************** 
+/* *******************EJIMAS PER SARASA:******************** 
 
  for (let i=0; i < marks.length; i++) { 
      console.log(marks[i]);   <- kreipimasis i saraso i-taji nari
                               <- i gali buti bet koks zodis ar simbolis
  }
- * *************************************************** */
+ * ^^^^^^^^^^^^^^^^^^^EJIMAS PER SARASA:^^^^^^^^^^^^^^^^^^^  */
+
+
+
+
+ // *********** teksto israsymas pasimboliui *************
+// stringas (bet koks tekstinis zodis) irgi yra ARRAY tik viskas apjunga i vientisa teksto gabala, vadinasi visas taisykles kurias galima pritaikyti array, galima ir stringui 
+
+const sakinys = 'Labas rytas';
+for (let i=0; i < sakinys.length; i++) {
+    const simbolis = sakinys[i];
+    console.log(simbolis);
+
+}
+// ^^^^^^^^^^^^^ teksto israsymas pasimboliui^^^^^^^^^^^ 
