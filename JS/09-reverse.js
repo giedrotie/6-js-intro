@@ -2,6 +2,7 @@
 pvz.: “abcdef” -> “fedcba”
 */
 
+
 const text ='abcdef';              // ka mes turime? - texta 
 let reverse = '';           // ka mes norime gauti? - reverse
                                     //pradzioje '' - tuscias  
@@ -31,6 +32,8 @@ for ( let i=0; i < text.length; i++) {     // i bus teksto saraso itoji raide
 }
 console.log(text, '->', reverse);
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // kitas SPRENDIMO BUDAS:
 
 for ( let i = text.length - 1; i >= 0; i-- ) {
@@ -41,11 +44,31 @@ console.log(text, '->', reverse);
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 // trecias SPRENDIMO BUDAS
 
 for ( let i = text.length; i > 0; i--) {
     reverse += text[i - 1];
 }
 console.log(text, '->', reverse); 
+
+
+
+/* **************************************************
+ paverskime  REVERSE CIKLA i funkcija:
+
+const pirmasZodis ='abcdef';
+
+function reverseString (text) { // kai mano funkcija gaus bet koki teksta nesvarbu 
+                                // koki zodi (text), 
+let reverse = '';               //ji inicijuoja tuscia kintamaji - let reverse , 
+
+for (let i = 0; i < text.length; i++) { //tada eina per ta duota teksta - per jo 
+                                        //ilgi (text.length)
+    reverse = text[i] + reverse;        //istraukineja raides text[i], sustato ten 
+                                        //kur reikia (reverse)
+}
+}
+  console.log(text, '->', reverse);     // isspausdina i console
+
+  reverseString(pirmasZodis); //funkcijos iskvietimas 
+  ******************************************** */
