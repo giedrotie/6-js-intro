@@ -28,7 +28,7 @@ console.log(ats);
 
 
 //su begalybe galima atlikti skaiciavimus, bet tai nera skaicius
-
+/* 
 Infinity     // teigiama begalybe
 -Infinity    // neigiama begalybe
 
@@ -42,3 +42,5 @@ i+= daliklis
 11 20 /5
 15, 20          (iki - nuo) / daliklis + 1
 i += daliklis 
+
+*/
