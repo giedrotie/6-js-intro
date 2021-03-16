@@ -2,38 +2,50 @@
 pvz.: “abcdef” -> “fedcba”
 */
 
-const text ='abcdef';
-let reverse = '';
+const text ='abcdef';              // ka mes turime? - texta 
+let reverse = '';           // ka mes norime gauti? - reverse
+                                    //pradzioje '' - tuscias  
+// koki algoritma sugalvoti?
 
-// for ( let i=0; i < text.length; i++) {
-//    console.log(i, text[i]);
-//   reverse += text[text.length - 1 - i];
-// }
-
-
-for (let i = 0; i < text.length; i++) {
-    reverse = text[i] + reverse;
+// ciklas:
+                                        // text.length reikalingas kad visas raides tekste paimtu
+for ( let i=0; i < text.length; i++) {     // i bus teksto saraso itoji raide
+   console.log(i, text[i]);                // cia isspausdins indexa ir kokia raide zymi
+                           
+   reverse += text[text.length - 1 - i];   //[skliaustuose] galima atlikti matematinius veiksmus
+                                           // vienas budas
 }
-
-
-console.log(text, '->', reverse);
-
+    console.log(reverse);
+    
 /*
 0 -> 5
-1 -> 4
-2 -> 3      texto ilgis - 1 -2
+1 -> 4          texto ilgis yra 5  = texto ilgis - 1 
+2 -> 3          texto ilgis - 1
 */
 
 
+ for (let i = 0; i < text.length; i++) {
+  reverse = text[i] + reverse;           // svarbu zinoti kur ta raide dadame
+                                        // i prieki statome text[i] o ne is galo
+                                    
+}
+console.log(text, '->', reverse);
 
-/*
-for ( let i = text.length; i > 0; i--) {
+// kitas SPRENDIMO BUDAS:
+
+for ( let i = text.length - 1; i >= 0; i-- ) {
+    console.log(i, text[i]);
     reverse += text[i];
 }
-console.log(text, '->', reverse); */
+console.log(text, '->', reverse); 
 
-/*
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+// trecias SPRENDIMO BUDAS
+
 for ( let i = text.length; i > 0; i--) {
     reverse += text[i - 1];
 }
-console.log(text, '->', reverse); */
+console.log(text, '->', reverse); 
