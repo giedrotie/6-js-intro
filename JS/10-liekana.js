@@ -10,9 +10,9 @@ Skaičių intervale tarp 0 ir 11, besidalijančių be liekanos iš 7 yra 2 viene
 */
 
 
-const nuo = 1;
-const iki = 11;
-const daliklis = 3;
+const nuo = -18000000;
+const iki = 18000000;
+const daliklis = 5;
 let kiekis =0;
 
 for ( let i = nuo; i <= iki; i++) {
@@ -22,3 +22,23 @@ for ( let i = nuo; i <= iki; i++) {
 }
 const ats = `Skaičių intervale tarp ${nuo} ir ${iki}, besidalijančių be liekanos iš ${daliklis} yra ${kiekis} vienetai.`;
 console.log(ats);
+
+// ar imanoma pagreitinti algoritma?
+
+
+
+//su begalybe galima atlikti skaiciavimus, bet tai nera skaicius
+
+Infinity     // teigiama begalybe
+-Infinity    // neigiama begalybe
+
+
+0 - 20          /5
+0. 5, 10, 15, 20
+i+= 5
+i+= daliklis
+
+
+11 20 /5
+15, 20          (iki - nuo) / daliklis + 1
+i += daliklis 
