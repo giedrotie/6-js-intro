@@ -5,8 +5,26 @@ function daugyba(a, b) {
     if (typeof a !== 'number'){ // jeigu, a yra ne skaicius
         return `Pirmasis parametras turi buti skaiciaus tipo`; 
                                 // grazinti klaidos pranesima
+    } 
+     
+  /* 
+          // isNaN - Is not a Number - ty netikras skaicius , nes NaN - not a 
+                                                                        Number 
+    if (isNaN(a) || a === Infinity || a === -Infinity ) {
+        return `Pirmasis parametras turi buti normalus skaicius ir negali buti ${a}`; 
     }
-    if (isNaN (a) || a === Infinity || a === -Infinity ) {
+    */
+
+
+/*  kitas var :
+
+     if ('' + a === 'NaN' || Math.abs(a) === Infinity) {
+        return `Pirmasis parametras turi buti normalus skaicius ir negali buti ${a}`; 
+    }
+    Math.abs(a) - absoliucios reiksmes funkcija
+*/
+
+     if (!isFinite(a)) { // skaitosi kaip - ar tai nera baigtine reiksme?
         return `Pirmasis parametras turi buti normalus skaicius ir negali buti ${a}`; 
     }
 
@@ -17,8 +35,6 @@ function daugyba(a, b) {
     if (isNaN (b) || b === Infinity || b === -Infinity ) {
         return `Antrasis parametras turi buti normalus skaicius ir negali buti ${b}`; 
     }
-
-
 
     //logika
     const rez = a * b;
@@ -59,8 +75,7 @@ console.log(daugyba (-Infinity, 3));
 console.log(daugyba (3, -Infinity));
 console.log(daugyba (-Infinity, -Infinity));
 
-
-
+// **************************************************************
 
                    // a, b 
 console.log(daugyba(4, 5), '->', 20);           // 20
