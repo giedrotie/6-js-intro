@@ -44,7 +44,7 @@ function daugyba(a, b) {
 } 
 
 
-// SAVARTYNAS, NES JU ATSAKYMASYRA KLAIDOS PRANESIMAS
+// SAVARTYNAS, NES JU ATSAKYMASs YRA KLAIDOS PRANESIMAS
 
 console.log(daugyba(true,false), '->', 15);      //Pirmasis parametras turi buti 
 console.log(daugyba(3,false), '->', 15);        //skaiciaus tipo -> 15 
@@ -77,7 +77,7 @@ console.log(daugyba (-Infinity, -Infinity));
 
 // **************************************************************
 
-                   // a, b 
+// a, b = ka suskaiciavo funkcija -> vs ka as norejau rast
 console.log(daugyba(4, 5), '->', 20);           // 20
 console.log(daugyba(44, 5), '->',220);          // 220
 console.log(daugyba(-44, -55), '->',2420);      // 2420
