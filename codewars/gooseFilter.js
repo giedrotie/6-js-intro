@@ -65,3 +65,32 @@
          []);   // jeigu mes duodame visas neleistinas reiksmes , turi atsiusti tuscia sarasa.
 
         
+
+
+
+
+         function gooseFilter (birds) {
+            let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]; 
+            const rez = []; 
+                for (let b=0; b < birds.length; b++ ){ 
+                    const bird = birds[b]; 
+                    
+                    let yraSarase = false;         
+                   for (let g=0; g < geese.length; g++ ) {
+                            const goose = geese[g];
+    
+                            if  (goose === bird){   
+                                yraSarase = true;   
+                                break;
+                            }
+                   }
+        
+                   if (!yraSarase ){          
+                            rez.push(bird); 
+                   }
+        
+                }
+            
+                    return rez;
+          }
+        

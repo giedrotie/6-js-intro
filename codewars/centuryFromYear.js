@@ -3,6 +3,9 @@ function century(year) {
     return Math.ceil(year / 100);
 }
 
+
+
+
  /* ******************** kitas sprendimo budas ***********************
  */ 
 
@@ -42,7 +45,6 @@ Math.ceil - apvalinimas i priverstinai i virsu iki sveikos dalis
 
 Math.round - apvalinimas pagal matematine taisykle konkriai 0.5 apvalina i virdu
 */
-
 
 
 
