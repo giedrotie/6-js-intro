@@ -30,8 +30,6 @@ parseFloat () is istraukia ir desimtaine dali
 */
 
 
-Number()
-
 function sumStr(a,b) {
   // return '9'; tada bandau return a + b  // bet cia skaiciai yra text, 
                                             //todel neveikia
@@ -59,3 +57,15 @@ console.log(sumStr("34", ""), '->', "34");
 console.log(sumStr("", ""), '->', "0");
 
 // tuscias tekstas konvertuojasi i NaN, as turi ji konvertuoti kaip nuli 0 
+
+
+ /* ******************** kitas sprendimo budas ***********************
+ */
+
+ function sumStr1(p, z) {
+     const pirmasSkaicius = p === '' ? 0 : parseInt(p);
+     const antrasSkaicius = z === '' ? 0 : parseInt(z);
+
+     return '' + (pirmasSkaicius + antrasSkaicius);
+ }
+

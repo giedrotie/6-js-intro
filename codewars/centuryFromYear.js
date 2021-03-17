@@ -11,7 +11,8 @@ function century(year) {
 
  // 1. amzius is esmes yra metai / 100
 
-
+ function century(year) {
+     
     let amzius = year / 100;
     console.log(amzius);
 
@@ -53,6 +54,5 @@ let amzius = year / 100;
 amzius = Math.floor(amzius);
 if (year % 100 > 0) {
     amzius++;
-}
 return amzius;
 }
