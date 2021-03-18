@@ -6,9 +6,9 @@ pvz.: “abcdef” -> “fedcba”
 const text ='abcdef';              // ka mes turime? - texta 
 let reverse = '';           // ka mes norime gauti? - reverse
                                     //pradzioje '' - tuscias  
-// koki algoritma sugalvoti?
+                                            // koki algoritma sugalvoti?
 
-// ciklas:
+                                         // ciklas:
                                         // text.length reikalingas kad visas raides tekste paimtu
 for ( let i=0; i < text.length; i++) {     // i bus teksto saraso itoji raide
    console.log(i, text[i]);                // cia isspausdins indexa ir kokia raide zymi
