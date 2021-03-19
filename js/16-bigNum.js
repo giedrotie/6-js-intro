@@ -5,7 +5,7 @@ function bigNum (list){
     // 1 input validation
 
     if (!Array.isArray(list)) { // budas labai konkreciai atpazinti /
-                                //kad tai yra saras
+                                //kad tai yra sarasas
         return 'ERROR: netinkamas tipas, turi buti array (sarasas)';
     }
     /* if (typeof list !== 'object') {
@@ -18,11 +18,18 @@ function bigNum (list){
     }
 
     // 2 logic
-    let biggest = list[0];
+    let biggest = -Infinty;
 
     for (let i=1; i<list.length; i++) {
-
         const number = list[i];
+
+        // ar tai normalus skaicius
+
+        if(!isFinite(number)) {
+            continue;
+        }
+
+        // ar jis didesnis uz jau zinoma didziausia skaiciu
         if (number > biggest) {
             biggest = number;
         }
@@ -53,3 +60,5 @@ console.log(bigNum([-1, -2, -3, -4, -5, -6, -7, -8]), '->', -1);
 console.log(bigNum([-11, -2, -35, -4, -5, -6, -7, -8]), '->', -2);
 
 /* ************************************ */
+
+console.log(bigNum([1, -2, 3, 5, Infinty ]), '->', 5);
