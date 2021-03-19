@@ -2,11 +2,33 @@
 
 
 function litres(time) {
+    Math.floor(time)
+    let litres = Math.floor(time) * 0.5 ;
+    const result =  Math.floor(litres);
+    return result;
+}
+
+/*
+} 
+if (hours > 1){
+    console.log(hours);
+    return hours;  
+} else {
+    if (hours < 1);
     return 0;
-  }
+} */
 
 
 
+
+// 1 paimti skaiciu is saraso t.y. hours
+// ji suapvalinti iki sveikojo skaiciaus i mazaja puse hours Math
+
+// 1 sumazint kiek valandu vaziuoja
+// 2 / 0.5 per h
+// laika suaovalinti iki zemesnio sveiko skaiciaus
+// jei isgeria < 1 l, tada suapvalinti iki maziausio sveiko skaiciaus
+// liters = valandas * 0.5 = 
 
 
 console.log(litres(2), '->', 'should return 1 litre');
