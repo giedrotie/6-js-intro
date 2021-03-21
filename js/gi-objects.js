@@ -1,12 +1,27 @@
+const mokykla = [
+    ['Jonukas', [10,2]],
+    ['Mariukas', [2,7]]
+];
+
+// [vardas, pazymiai, megstamos raides, kiek deinu gyvena, ar nori eiti i PC, ar siemet maudesi]
+const mokinys = ['Jonukas', [10,2], 'asf', 6478, true, false]
+const vardas = mokinys [0];
+const pazymiai = mokinys [1];
+
+/* ******************* */
+// formatas {} - objektu sarasas
+    // key: value      //key buna isvardinti abeceles tvarka
+                        // objekte 'key' dazniausiai yra tekstinis
+
 const student = {
-    vardas: 'Petras',
-    pazymiai: [10, 2],
+    vardas: 'Petras', //console.log(student['vardas]);
+    pazymiai: [10, 2], //console.log(student['megstamosRaides']);
     megstamosRaides: 'asf',
     kiekDienuGyvas: 5485,
     arNoriIPc: true,
-    arSiemetMaudesi: false,
+    arSiemetMaudesi: false,  
     tevai: {
-        motina: {
+        motina: { 
             vardas: 'Onute',
             telNr: 4485621559,
             amzius: 55
