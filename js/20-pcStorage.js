@@ -21,7 +21,7 @@ const pc = {
                 {
                     name: 'Android',
                     type: 'folder',
-                    content: [ ]
+                    content: []
                 },
                 {
                     name: 'GIMP 2',
@@ -30,11 +30,11 @@ const pc = {
                         {
                             name: 'dbghelp.dll',
                             type: 'file',
-                            size: 14
+                            size: 1497,
+                            sizeUnits: 'kb'
                         }
                     ]
-                '
-                }
+                },
             ]
         },
         {
@@ -44,17 +44,22 @@ const pc = {
             {
                 name: 'DiagTrack',
                 type: 'folder',
-                size: 2
-                sizeUnits: 'kb'
-            },
-
+                content: [
+                    {
+                        name: 'analyticsevents.dat',
+                        type: 'file',
+                        size: 2,
+                        sizeUnits 'kb'
+                    }
+                ]
+            }
         ]
-        },
-        {
-            name: 'msdia008.dll',
-            type: 'file',
-            size: 884,
-            sizeUnits: 'kb'
+    },
+    {
+        name: 'msdia008.dll',
+        type: 'file',
+        size: 884,
+        sizeUnits: 'kb'
         }
     ]
 }
