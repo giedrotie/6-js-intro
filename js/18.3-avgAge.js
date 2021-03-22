@@ -1,30 +1,27 @@
 
-// VIDUTINIS GIMINES AMZIUS
+// VIDUTINIS GIMINES AMZIUS 18.3-avgAge.js
+// uzdavinio esme kad vienu metu reikia sumuoti dvi reiksmes t.y. asmenu/vaiku counta/kieki ir amziaus counta
 
-function averageAge(asmuo) {
-    let childCount = 1;
-    let childAgeSum = asmuo.age;
+function averageAge(asmuo) { 
+    let childCount = 1;   // vaiku kiekis = 1 , nes pedro jau yra 1
+    let childAgeSum = asmuo.age;  // vaiku amziaus suma
 
-    if (asmuo.children) {
+    if (asmuo.children) { // jeigu vaiku yra, suskaiciuoti kiek
         for (let i = 0; i < asmuo.children.length; i++){
-            const child = asmuo.children[1];
+            const child = asmuo.children[i]; // kiekvienas vaikas 
 
             const childInfo = averageAge(child);
 
             childCount += childInfo.childCount;
             childAgeSum += childInfo.ageSum;
-
-            console.log(childInfo);
-
         }
     }
-    
+
     return {
-        childClount: childCount,
+        childCount: childCount,
         ageSum: childAgeSum 
     }
 }
-
 
 const gimine1 = {                   // objektas yra kompleskinis kintamasis panasus i array
     name: 'Pedro',                // array susideda indexus nuo 0, tada 1, 2 3 ir tt.
@@ -53,7 +50,6 @@ const gimine1 = {                   // objektas yra kompleskinis kintamasis pana
     ]                               // objektuose visus raktazodzius turime uzvadinti patys
    
 }
-
 const giminesDuomenys = averageAge(gimine1);
-let average = giminesDuomenys.ageSum / giminesDuomenys.childCount
+let average = giminesDuomenys.ageSum / giminesDuomenys.childCount;
 console.log(giminesDuomenys, "Average age:", average);

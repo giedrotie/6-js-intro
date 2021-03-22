@@ -1,5 +1,6 @@
-// GIMINES MEDYJE REIKIA RASTI KAS BUVO/YRA VYRIAUSIAS?
-
+ v  fs/*
+Gimines medyje reikia rasti kas buvo/yra vyriausias?
+*/
 
 function oldest(asmuo) {
     let biggestAge = asmuo.age;
@@ -20,8 +21,6 @@ function oldest(asmuo) {
     return biggestAge;
 }
 
-
-
 function oldestWithName(asmuo) {
     let oldestName = asmuo.name;
     let biggestAge = asmuo.age;
@@ -30,7 +29,7 @@ function oldestWithName(asmuo) {
         for (let i = 0; i < asmuo.children.length; i++) {
             const child = asmuo.children[i];
 
-            const oldestChild = oldestWithName(child); // cia kvieciama to paties pavadinimo funkcija, tik vienu leveliu gilesne informacija. esme kad visada reikia kviesti to paties pavadinimo funkcija siuo atveju "oldest" kas atlieka paieska kas yra vyriausias objekte
+            const oldestChild = oldestWithName(child);
 
             if (oldestChild.age > biggestAge) {
                 biggestAge = oldestChild.age;
@@ -38,15 +37,15 @@ function oldestWithName(asmuo) {
             }
         }
     }
-    
+
     return {
         name: oldestName,
         age: biggestAge
     };
 }
 
-const gimine1 = {                   // objektas yra kompleskinis kintamasis panasus i array
-    name: 'Petras',                // array susideda indexus nuo 0, tada 1, 2 3 ir tt.
+const gimine1 = {
+    name: 'Petras',
     age: 40,
     children: [
         {
@@ -61,7 +60,7 @@ const gimine1 = {                   // objektas yra kompleskinis kintamasis pana
                     name: 'Elvyra',
                     age: 66
                 },
-            ]  
+            ]
         },
         {
             name: 'Jonas',
@@ -69,22 +68,22 @@ const gimine1 = {                   // objektas yra kompleskinis kintamasis pana
             children: [
                 {
                     name: 'Aleksas',
-                    age: 20
-                },
-                {
-                    name: 'Gokas',
-                    age: 200
+                    age: 20,
+                    children: [
+                        {
+                            name: 'Gokas',
+                            age: 200
+                        }
+                    ]
                 },
                 {
                     name: 'Gabriele',
                     age: 80
                 },
-            ]  
+            ]
         },
-    ]           // objektuose visus raktazodzius turime uzvadinti patys
-   
+    ]
 }
-
 
 const vyriausias = oldest(gimine1);
 console.log(vyriausias);
