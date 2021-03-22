@@ -1,5 +1,4 @@
-//ALGRITMAS SKIRTAS RASTI DIDZIAUSIA SVEIKA SKAICIU
-// gali buti ir maziausias skaicius sarase
+//ALGRITMAS SKIRTAS RASTI antram pagal DIDuma SVEIKA SKAICIU
 
 function bigNum (list){
     // 1 input validation ///////////// isitiktinti ar tinkamas tipas
@@ -25,24 +24,8 @@ function bigNum (list){
 
     // 2 logic ////////////////////////////////
 
-/*  ********************* algoritmas sskirtas  rasti didziausia normalu skaiciu */
-
-   /* let biggest = list[0]; // jeigu iki atejau, vadinasi saras yra ne tuscias
-                            // tada galiu uzsirasyti kad nulinis kintamasis sarase potencialiai yra didziausias
-
-    for (let i=1; i<list.length; i++) {
-        const number = list[i];
-                            // ar jis didesnis uz jau zinoma didziausia skaiciu?
-        if (number > biggest) {
-            biggest = number;
-        }      */     
-
-/*  ********************* cia budas jei sarase duoti nenormalus skaiciai  */
-/*  ********************* cia budas jei sarase duoti nenormalus skaiciai  */
-/*  ********************* cia budas jei sarase duoti nenormalus skaiciai  */
-
-    let biggest = -Infinity;    // nes kad ir koks neigiamas didziausias skaicius, 
-                                //jis vistiek yra maziau uz -Begalybe !!!!!!!!!!
+    let biggest = -Infinity;   
+    let secondBiggest = -Infinity;                   
 
     for (let i=0; i<list.length; i++) {
         const number = list[i];
@@ -53,20 +36,24 @@ function bigNum (list){
     }
     // ar jis didesnis uz jau zinoma didziausia skaiciu?
         if (number > biggest) {
+            secondBiggest = biggest;
             biggest = number;  
-        }                 ;
-          
+        } else if (number > secondBiggest && number < biggest) {
+            secondBiggest = number;
+        }                  
     }
+
     // 3 logic validation !!!!!!!!!!!!!!!!!!!!!!!!!!
     // norime pasitikrinti ar teisingai skaiciuoja
-    if (biggest === -Infinity) {
+    if (secondBiggest === -Infinity) {
         return 'ERROR: sarase nerastas nei vienas normalus skaicius'
     }
 
     // 4 result
-    return biggest;
+    return secondBiggest;
 }
 
+/*
 console.log(bigNum('pomidoras')); // string
 console.log(bigNum(4263)); // number
 console.log(bigNum(true)); // boolean
@@ -79,17 +66,18 @@ console.log(bigNum(null)); // typeof null --> "object"
 console.log(bigNum([])); // typeof []   --> "object"
 console.log(bigNum({})); // typeof {} --> "object" - 
                             //TY TIKRASIS OBJEKTAS
+                            */
 
 
 console.log(bigNum([1]), '->', 1);
-console.log(bigNum([1, 2, 3 ] ),'->', 3);
-console.log(bigNum([-5, 78, 14, 0, 18 ]),'->', 78);
-console.log(bigNum([69, 69, 69, 69, 66 ]), '->', 69);
-console.log(bigNum([-1, -2, -3, -4, -5, -6, -7, -8]), '->', -1);
-console.log(bigNum([-11, -2, -35, -4, -5, -6, -7, -8]), '->', -2);
+console.log(bigNum([1, 2, 3 ] ),'->', 2);
+console.log(bigNum([-5, 78, 14, 0, 18 ]),'->', 18);
+console.log(bigNum([69, 69, 69, 69, 66 ]), '->', 66);
+console.log(bigNum([-1, -2, -3, -4, -5, -6, -7, -8]), '->', -2);
+console.log(bigNum([-11, -2, -35, -4, -5, -6, -7, -8]), '->', -4);
 
 
-
+/*
 console.log(bigNum([1, 8, 3, 5, Infinity]), '->', 8);
 console.log(bigNum([1, 8, Infinity, 3, 5]), '->', 8);
 console.log(bigNum([Infinity, 1, 8, 3, 5]), '->', 8);
@@ -125,4 +113,4 @@ console.log(bigNum([888, Infinity, null, 'sads', true]), '->', 888);
 console.log(bigNum(['888', Infinity, null, 'sads', true]));
 
 // recursion  -- sarasai sarasuose -- neribotas gylis
-console.log(bigNum([-5, 78, [14, 999], 0, 18]), '->', 999); 
+console.log(bigNum([-5, 78, [14, 999], 0, 18]), '->', 999); */
