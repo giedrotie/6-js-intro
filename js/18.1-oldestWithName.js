@@ -1,4 +1,4 @@
- v  fs/*
+/*
 Gimines medyje reikia rasti kas buvo/yra vyriausias?
 */
 
